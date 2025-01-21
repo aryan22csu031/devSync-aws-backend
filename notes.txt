@@ -1,0 +1,23 @@
+---------------------------------
+what is the version of a package ? 
+eg: 4.19.2
+4 --> major version
+19 --> minor version
+2 --> patch
+patch: small change (eg: bug fix)
+minor version: example- new feature
+major version: example- breaking change (eg: changes in libraries)
+^4.19.2 means that our project will be updated to newer version if any patch or minor change comes.
+--------------------------------------------
+
+We can have multiple route handlers for a single route
+eg : (i) app.get("/admin", (req,res,next) => {}, (req,res,next) => {},...)
+
+Also we can have an array of route handlers :-
+(ii) app.get("/admin", [(req,res,next) => {}, (req,res,next) =>{}], (req,res,next) => {})
+
+------------------------------------------------
+
+jwt auth: when a user login to a website, the login request is sent to the server. the website server generates a jwt token for that particular user, sends the jwt token to the user end and logs in the user. next time when the user sends a get/post/delete/patch request, everytime that jwt token is attached to the request and sent to the server, then the server checks if the token is valid, and validates it. hence, if valid then the user is able to do the particular action he wants. if the token is not valid, the user again have to login on the website.
+
+concept of cookies: the server sends the jwt token to the user wrapped in the piece of code called cookie. this cookie is stored in the browser, everytime user makes a request, this cookie travels with the request and the server validates the cookie to perform the further action. every cookie have a expiration time, when the cookie expires, then the server fails to validate it and user have to login again to get the updated cookie.
