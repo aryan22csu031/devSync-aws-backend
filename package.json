@@ -4,9 +4,8 @@
   "description": "tinder for developers",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon ./backend/src/server.js",
-    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
-    "start": "node ./backend/src/server.js"
+    "dev": "nodemon ./src/server.js",
+    "start": "node ./src/server.js"
   },
   "author": "Aryan Arora",
   "license": "ISC",
